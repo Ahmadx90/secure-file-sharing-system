@@ -1,14 +1,28 @@
-# Secure File Sharing System
 
-A secure, feature-rich file sharing system built with React, TypeScript, , and GCP Firebase integration.
+<h1 align="center">🔐 Secure File Sharing System</h1>
+<h3 align="center">🛡️ Enterprise-Grade, Password-Protected File Sharing 🔑</h3>
+
+
+<p align="center">
+  🔒 <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/Ahmadx90/secure-file-sharing-system?style=for-the-badge&color=228B22&label=LICENSE&labelColor=1A1A1A" alt="License">
+  </a>
+  🗄️ <img src="https://img.shields.io/github/repo-size/Ahmadx90/secure-file-sharing-system?style=for-the-badge&color=008B8B&label=REPO%20SIZE&labelColor=1A1A1A" alt="Repo Size">
+  🕒 <img src="https://img.shields.io/github/last-commit/Ahmadx90/secure-file-sharing-system?style=for-the-badge&color=4169E1&label=LAST%20COMMIT&labelColor=1A1A1A" alt="Last Commit">
+  🐞 <img src="https://img.shields.io/github/issues/Ahmadx90/secure-file-sharing-system?style=for-the-badge&color=FFD700&label=ISSUES&labelColor=1A1A1A" alt="Issues">
+  ⭐ <img src="https://img.shields.io/github/stars/Ahmadx90/secure-file-sharing-system?style=for-the-badge&color=00CED1&label=STARS&labelColor=1A1A1A" alt="Stars">
+</p>
+
+<p align="center">
+  🖥️ <i>Securing files, one encrypted transfer at a time.</i> 🖤
+</p>
 
 
 
-[![GitHub license](https://img.shields.io/github/license/Ahmadx90/secure-file-sharing-system)](LICENSE)
-![GitHub repo size](https://img.shields.io/github/repo-size/Ahmadx90/secure-file-sharing-system)
-![GitHub last commit](https://img.shields.io/github/last-commit/Ahmadx90/secure-file-sharing-system)
-![GitHub issues](https://img.shields.io/github/issues/Ahmadx90/secure-file-sharing-system)
-![GitHub stars](https://img.shields.io/github/stars/Ahmadx90/secure-file-sharing-system?style=social)
+
+
+
+
 
 ---
 
