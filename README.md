@@ -13,111 +13,97 @@ This is a comprehensive secure file sharing platform that allows users to upload
 ## Complete Project Tree Structure
 
 ```
-secure-file-sharing-system/
-├── 📁 Frontend (React + TypeScript + Vite)
-│   ├── public/
-│   │   ├── robots.txt
-│   │   ├── favicon.ico
-│   │   └── placeholder.svg
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ui/              # Shadcn UI components
-│   │   │   │   ├── accordion.tsx
-│   │   │   │   ├── alert-dialog.tsx
-│   │   │   │   ├── alert.tsx
-│   │   │   │   ├── avatar.tsx
-│   │   │   │   ├── badge.tsx
-│   │   │   │   ├── button.tsx
-│   │   │   │   ├── card.tsx
-│   │   │   │   ├── dialog.tsx
-│   │   │   │   ├── dropdown-menu.tsx
-│   │   │   │   ├── form.tsx
-│   │   │   │   ├── input.tsx
-│   │   │   │   ├── label.tsx
-│   │   │   │   ├── progress.tsx
-│   │   │   │   ├── select.tsx
-│   │   │   │   ├── sheet.tsx
-│   │   │   │   ├── table.tsx
-│   │   │   │   ├── tabs.tsx
-│   │   │   │   ├── textarea.tsx
-│   │   │   │   ├── toast.tsx
-│   │   │   │   ├── toaster.tsx
-│   │   │   │   └── tooltip.tsx
-│   │   │   ├── Footer.tsx
-│   │   │   ├── Hero.tsx
-│   │   │   ├── Navbar.tsx
-│   │   │   └── ThemeToggle.tsx
-│   │   ├── hooks/
-│   │   │   ├── use-mobile.tsx
-│   │   │   └── use-toast.ts
-│   │   ├── integrations/
-│   │   │   └── /
-│   │   │       ├── client.ts     #  client configuration
-│   │   │       └── types.ts      # Auto-generated database types
-│   │   ├── lib/
-│   │   │   └── utils.ts          # Utility functions
-│   │   ├── pages/
-│   │   │   ├── Dashboard.tsx     # User dashboard for file management
-│   │   │   ├── FileDownload.tsx  # File download page
-│   │   │   ├── Help.tsx          # Help page
-│   │   │   ├── HomePage.tsx      # Landing page
-│   │   │   ├── Login.tsx         # Authentication page
-│   │   │   ├── NotFound.tsx      # 404 page
-│   │   │   ├── PrivacyPolicy.tsx # Privacy policy
-│   │   │   ├── Signup.tsx        # User registration
-│   │   │   └── Support.tsx       # Support page
-│   │   ├── assets/
-│   │   │   └── hero-bg.jpg       # Hero background image
-│   │   ├── App.tsx               # Main app component
-│   │   ├── App.css               # Global styles
-│   │   ├── index.css             # Tailwind + custom styles
-│   │   ├── main.tsx              # App entry point
-│   │   └── vite-env.d.ts         # Vite type definitions
-│   ├── .env                      # Environment variables
-│   ├── eslint.config.js          # ESLint configuration
-│   ├── index.html                # HTML template
-│   ├── package.json              # Dependencies
-│   ├── package-lock.json         # Lock file
-│   ├── postcss.config.js         # PostCSS configuration
-│   ├── tailwind.config.ts        # Tailwind CSS configuration
-│   ├── tsconfig.json             # TypeScript configuration
-│   ├── tsconfig.app.json         # App-specific TypeScript config
-│   ├── tsconfig.node.json        # Node-specific TypeScript config
-│   ├── vite.config.ts            # Vite configuration
-│   └── components.json           # Shadcn UI configuration
+# 📂 Project Structure – Secure File Sharing System
+
+```bash
+secure-file-sharing-system/               # 🚀 Main Project Folder
+├── 📄 .gitignore                        # Files & folders Git should ignore
+├── 📄 bun.lockb                         # Bun lock file (dependency versions)
+├── 📄 README.md                         # Project documentation
 │
-├── 📁 Backend ( Edge Functions)
-│   ├── functions/
-│   │   ├── upload-file/
-│   │   │   └── index.ts      # File upload endpoint
-│   │   ├── download-file/
-│   │   │   └── index.ts      # File download endpoint
-│   │   ├── file-info/
-│   │   │   └── index.ts      # File metadata endpoint
-│   │   ├── user-files/
-│   │   │   └── index.ts      # User's files listing
-│   │   └── delete-file/
-│   │   └── index.ts          # File deletion endpoint
-│   ├── migrations/		# Database migrations (auto-generated)
-│   └── config.toml 		#  configuration
+├── 📂 Backend                           # 🖥️ Node.js + Express API (Server Side)
+│   ├── 📂 config                        # ⚙️ Environment & Firebase configs
+│   │   ├── env.js                      # Environment variable loader
+│   │   └── firebase.js                 # Firebase SDK setup
 │   │
-│   └── 📁 Database Schema (PostgreSQL with RLS)
-│       ├── 🗃️ Tables:
-│       │   ├── profiles          # User profile data
-│       │   ├── files             # File metadata and access control
-│       │   └── download_logs     # Download tracking
-│       ├── 🔒 RLS Policies:      # Row Level Security for data protection
-│       ├── 🗂️ Storage Buckets:   # File storage configuration
-│       ├── ⚡ Triggers:          # Auto-update timestamps & profiles
-│       └── 🔧 Functions:         # Custom database functions
+│   ├── 📂 controllers                   # 🎯 Business logic & request handlers
+│   │   ├── auth.js                     # Auth & JWT logic
+│   │   ├── files.js                    # File upload/download logic
+│   │   └── users.js                    # User management APIs
+│   │
+│   ├── 📂 middleware                    # 🛡️ Express middlewares
+│   │   ├── auth.js                     # JWT auth middleware
+│   │   └── upload.js                   # File upload handling (Multer)
+│   │
+│   ├── 📂 routes                        # 🌐 API endpoints
+│   │   ├── auth.js                     # /auth endpoints
+│   │   ├── files.js                    # /files endpoints
+│   │   └── users.js                    # /users endpoints
+│   │
+│   ├── 📂 src                           # 🏗️ TypeScript entry
+│   │   └── index.ts                    # App bootstrap / entry point
+│   │
+│   ├── 📂 utils                         # 🧰 Helper functions
+│   │   └── formatFileSize.js           # Converts file sizes to human-readable
+│   │
+│   ├── 📄 .env                          # 🔑 Environment variables
+│   ├── 📄 Google Auth client secrets.json # Google OAuth client secrets
+│   ├── 📄 service-account-key.json      # Firebase Admin SDK key
+│   ├── 📄 package.json                  # Backend dependencies & scripts
+│   ├── 📄 package-lock.json             # Dependency lock file
+│   └── 📄 server.js                     # Main Express server file
 │
-├── 📁 Configuration Files
-│   ├── .gitignore               # Git ignore rules
-│   ├── README.md                # This file
-│   └── bun.lockb               # Bun lock file
+├── 📂 Frontend                          # 🎨 React + Vite (Client Side)
+│   ├── 📂 dist                          # 🏁 Production build output
+│   │   ├── 📂 assets                    # Static bundled assets
+│   │   ├── 📄 favicon.ico              # Favicon
+│   │   ├── 📄 index.html               # Built HTML
+│   │   ├── 📄 placeholder.svg          # Placeholder image
+│   │   └── 📄 robots.txt               # SEO / crawler rules
+│   │
+│   ├── 📂 public                        # 🌍 Public assets (copied as-is)
+│   │   ├── favicon.ico
+│   │   ├── placeholder.svg
+│   │   └── robots.txt
+│   │
+│   ├── 📂 src                           # 🖌️ Application source code
+│   │   ├── 📂 assets                   # Images, icons, static resources
+│   │   │   └── hero-bg.jpg
+│   │   │
+│   │   ├── 📂 components               # Reusable UI components
+│   │   │   ├── 📂 ui                  # 🧩 ShadCN UI components
+│   │   │   │   ├── accordion.tsx      # Collapsible panels
+│   │   │   │   ├── alert-dialog.tsx   # Modal alerts
+│   │   │   │   ├── ...                # Many other UI components (buttons, menus)
+│   │   │   ├── Footer.tsx             # Site footer
+│   │   │   ├── Hero.tsx               # Hero section
+│   │   │   ├── Navbar.tsx             # Navigation bar
+│   │   │   ├── ProtectedRoute.tsx     # Auth-based route protection
+│   │   │   └── ThemeToggle.tsx        # Dark/Light mode switch
+│   │   │
+│   │   ├── 📂 hooks                    # (Optional) Custom React hooks
+│   │   ├── 📂 integrations             # API integrations
+│   │   ├── 📂 lib                      # Utility functions / libraries
+│   │   ├── 📂 pages                    # React pages / routes
+│   │   │
+│   │   ├── App.css                    # Global styles
+│   │   ├── App.tsx                    # Root React component
+│   │   ├── index.css                  # Tailwind CSS imports
+│   │   ├── main.tsx                   # App entry point
+│   │   └── vite-env.d.ts              # TypeScript env types
+│   │
+│   ├── 📄 .env                         # 🔑 Frontend environment variables
+│   ├── 📄 index.html                   # Development HTML entry
+│   ├── 📄 package.json                 # Frontend dependencies & scripts
+│   ├── 📄 package-lock.json            # Dependency lock file
+│   ├── 📄 postcss.config.cjs           # PostCSS config
+│   ├── 📄 tailwind.config.js/ts        # Tailwind CSS config
+│   ├── 📄 tsconfig*.json               # TypeScript configurations
+│   └── 📄 vite.config.ts               # Vite configuration
+
 ```
 
-## Database Schema
+## Google Cloud Storage & Firebase Setup 
 
 ### Tables
 
@@ -275,7 +261,7 @@ GCP_STORAGE_BUCKET="your_storage_bucket_name"
 
 - Node.js 18+ (or use [nvm](https://github.com/nvm-sh/nvm))
 - npm or bun
-- VSCode (recommended)
+- VSCode (Optional)
 
 ### Installation Steps
 
