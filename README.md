@@ -386,7 +386,7 @@ Install these extensions for optimal development experience:
 
 ### Frontend Deployment
 
-- Deploy via Lovable's built-in deployment
+- Deploy via 's built-in deployment
 - Configure custom domain if needed
 - Set up CDN for static assets
 
