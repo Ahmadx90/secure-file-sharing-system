@@ -2,6 +2,76 @@
 
 A secure, feature-rich file sharing system built with React, TypeScript, , and GCP Firebase integration.
 
+
+
+[![GitHub license](https://img.shields.io/github/license/Ahmadx90/secure-file-sharing-system)](LICENSE)
+![GitHub repo size](https://img.shields.io/github/repo-size/Ahmadx90/secure-file-sharing-system)
+![GitHub last commit](https://img.shields.io/github/last-commit/Ahmadx90/secure-file-sharing-system)
+![GitHub issues](https://img.shields.io/github/issues/Ahmadx90/secure-file-sharing-system)
+![GitHub stars](https://img.shields.io/github/stars/Ahmadx90/secure-file-sharing-system?style=social)
+
+---
+
+## 📑 Table of Contents
+- [📖 Overview](#-overview)
+- [✨ Features](#-features)
+- [🛠 Tech Stack](#-tech-stack)
+- [📂 Project Overview](#project-overview)
+- [📁 Complete Project Tree Structure](#complete-project-tree-structure)
+- [🖼 Screenshots](#-screenshots)
+- [☁️ Google Cloud Storage & Firebase Setup](#google-cloud-storage--firebase-setup)
+  - [Database Tables](#tables)
+  - [Storage Setup](#storage)
+  - [Backend API Endpoints](#backend-api-endpoints)
+  - [Edge Function Environment Variables](#2--edge-functions-environment-variables)
+  - [Firebase Setup Steps](#firebase-setup-steps)
+  - [⚙️ Development Setup](#development-setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation Steps](#installation-steps)
+  - [VSCode Extensions (Recommended)](#vscode-extensions-recommended)
+- [🔐 Security Features](#-security-features)
+- [📁 File Management](#-file-management)
+- [🎯 Access Control](#-access-control)
+- [📊 Analytics & Monitoring](#-analytics--monitoring)
+- [🎨 User Experience](#-user-experience)
+- [🚀 Production Deployment](#production-deployment)
+  - [⚙️ Configuration](#-configuration)
+  - [Firebase Configuration](#firebase-configuration)
+  - [Frontend Deployment](#frontend-deployment)
+- [🔒 Security Considerations](#security-considerations)
+  - [Development](#development)
+  - [Production](#production)
+- [📚 Support & Documentation](#support--documentation)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
+
+
+---
+## 📖 Overview
+**Secure File Sharing System** is a full-stack web application designed for **safe, password-protected file sharing**.  
+Built with a modern tech stack and security best practices, it provides an intuitive interface for users to upload, share, and download files securely.
+
+---
+
+## ✨ Features
+✅ **Password-Protected Sharing** – Restrict access with secure links  
+✅ **Download Tracking** – Monitor who downloaded what  
+✅ **Secure Backend** – Encryption for files & passwords  
+✅ **Responsive Frontend** – Works on desktop & mobile  
+✅ **User Authentication** – Signup/Login support  
+
+---
+
+## 🛠 Tech Stack
+| Layer        | Technology |
+|-------------|-----------|
+| **Frontend** | React, Tailwind CSS |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB |
+| **Other** | GCP Storage (Optional), JWT, Bcrypt |
+
+---
+
 ## Project Overview
 
 This is a comprehensive secure file sharing platform that allows users to upload, share, and manage files with three levels of access control:
@@ -102,6 +172,23 @@ secure-file-sharing-system/               # 🚀 Main Project Folder
 │   └── 📄 vite.config.ts               # Vite configuration
 
 ```
+## 🖼 Screenshots
+Here’s a quick preview of the app:  
+
+| Page | Screenshot |
+|------|------------|
+| **Home** | ![Home](./screenshots/Home.png) |
+| **Login** | ![Login](./screenshots/Login.png) |
+| **Signup** | ![Signup](./screenshots/signup.png) |
+| **Dashboard** | ![Dashboard](./screenshots/Dashboard.png) |
+| **Download Page** | ![Download](./screenshots/Download.png) |
+| **Support Center** | ![Support](./screenshots/Support%20Center.png) |
+| **Help Center** | ![Help](./screenshots/Help%20Center.png) |
+| **Privacy Policy** | ![Privacy Policy](./screenshots/Privacy%20Policy.png) |
+
+> 🖌 **Tip:** You can replace these screenshots anytime by updating the files in the `screenshots/` folder.
+
+---
 
 ## Google Cloud Storage & Firebase Setup 
 
@@ -134,6 +221,15 @@ secure-file-sharing-system/               # 🚀 Main Project Folder
 ## Backend API Endpoints
 
 All endpoints are implemented as  Edge Functions:
+
+## 🔌 API Endpoints (summary)
+- `POST /functions/v1/upload-file` — Upload file (auth required)  
+- `POST /functions/v1/download-file` — Download file (auth or password depending on access)  
+- `GET  /functions/v1/file-info` — Get file metadata  
+- `GET  /functions/v1/user-files` — Get files for current user (auth required)  
+- `POST /functions/v1/delete-file` — Delete file (auth required)
+
+---
 
 ### 1. File Upload (`/functions/v1/upload-file`)
 
@@ -357,7 +453,7 @@ Install these extensions for optimal development experience:
 
 ## Production Deployment
 
-###  Configuration
+### ⚙️ Configuration
 
 1. Set up production  project
 2. Configure environment variables
