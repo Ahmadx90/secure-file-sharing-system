@@ -421,4 +421,4 @@ Install these extensions for optimal development experience:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the @Sameer Lab's License.
