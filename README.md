@@ -1,6 +1,6 @@
 # Secure File Sharing System
 
-A secure, feature-rich file sharing system built with React, TypeScript, Supabase, and GCP Firebase integration.
+A secure, feature-rich file sharing system built with React, TypeScript, , and GCP Firebase integration.
 
 ## Project Overview
 
@@ -51,8 +51,8 @@ secure-file-sharing-system/
 │   │   │   ├── use-mobile.tsx
 │   │   │   └── use-toast.ts
 │   │   ├── integrations/
-│   │   │   └── supabase/
-│   │   │       ├── client.ts     # Supabase client configuration
+│   │   │   └── /
+│   │   │       ├── client.ts     #  client configuration
 │   │   │       └── types.ts      # Auto-generated database types
 │   │   ├── lib/
 │   │   │   └── utils.ts          # Utility functions
@@ -86,7 +86,7 @@ secure-file-sharing-system/
 │   ├── vite.config.ts            # Vite configuration
 │   └── components.json           # Shadcn UI configuration
 │
-├── 📁 Backend (Supabase Edge Functions)
+├── 📁 Backend ( Edge Functions)
 │   ├── functions/
 │   │   ├── upload-file/
 │   │   │   └── index.ts      # File upload endpoint
@@ -99,7 +99,7 @@ secure-file-sharing-system/
 │   │   └── delete-file/
 │   │   └── index.ts          # File deletion endpoint
 │   ├── migrations/		# Database migrations (auto-generated)
-│   └── config.toml 		# Supabase configuration
+│   └── config.toml 		#  configuration
 │   │
 │   └── 📁 Database Schema (PostgreSQL with RLS)
 │       ├── 🗃️ Tables:
@@ -124,7 +124,7 @@ secure-file-sharing-system/
 1. **profiles**
 
    - User profile information
-   - Linked to Supabase Auth users
+   - Linked to  Auth users
    - Auto-created on user registration
 
 2. **files**
@@ -147,7 +147,7 @@ secure-file-sharing-system/
 
 ## Backend API Endpoints
 
-All endpoints are implemented as Supabase Edge Functions:
+All endpoints are implemented as  Edge Functions:
 
 ### 1. File Upload (`/functions/v1/upload-file`)
 
@@ -210,10 +210,10 @@ Update these files for GCP Firebase integration:
 #### 1. `.env` file (Frontend)
 
 ```env
-# Supabase Configuration (Already configured)
-VITE_SUPABASE_PROJECT_ID="kuphzxrquhwfkcljvkse"
-VITE_SUPABASE_PUBLISHABLE_KEY="your_supabase_anon_key"
-VITE_SUPABASE_URL="https://kuphzxrquhwfkcljvkse.supabase.co"
+#  Configuration (Already configured)
+VITE__PROJECT_ID="kuphzxrquhwfkcljvkse"
+VITE__PUBLISHABLE_KEY="your__anon_key"
+VITE__URL="https://kuphzxrquhwfkcljvkse..co"
 
 # GCP Firebase Configuration (Add these)
 VITE_FIREBASE_API_KEY="your_firebase_api_key"
@@ -224,9 +224,9 @@ VITE_FIREBASE_MESSAGING_SENDER_ID="your_sender_id"
 VITE_FIREBASE_APP_ID="your_app_id"
 ```
 
-#### 2. Supabase Edge Functions Environment Variables
+#### 2.  Edge Functions Environment Variables
 
-Add these secrets via Supabase Dashboard → Project Settings → Functions:
+Add these secrets via  Dashboard → Project Settings → Functions:
 
 ```bash
 # GCP Firebase Admin SDK
@@ -297,12 +297,12 @@ GCP_STORAGE_BUCKET="your_storage_bucket_name"
 3. **Environment Setup**:
 
    - Copy `.env.example` to `.env`
-   - Update with your Supabase and Firebase credentials
+   - Update with your  and Firebase credentials
 
 4. **Database Setup**:
 
    - Database migration has been run automatically
-   - Check Supabase Dashboard to verify tables are created
+   - Check  Dashboard to verify tables are created
 
 5. **Start development server**:
    ```bash
@@ -322,7 +322,7 @@ Install these extensions for optimal development experience:
     "ms-vscode.vscode-typescript-next",
     "esbenp.prettier-vscode",
     "ms-vscode.vscode-eslint",
-    "supabase.supabase",
+    ".",
     "formulahendry.auto-rename-tag",
     "ms-vscode.vscode-json",
     "chakrounanas.turbo-console-log"
@@ -335,7 +335,7 @@ Install these extensions for optimal development experience:
 ### 🔐 Security Features
 
 - Row Level Security (RLS) policies
-- JWT authentication via Supabase Auth
+- JWT authentication via  Auth
 - Password protection for files
 - IP tracking and audit logs
 - File encryption at rest
@@ -371,9 +371,9 @@ Install these extensions for optimal development experience:
 
 ## Production Deployment
 
-### Supabase Configuration
+###  Configuration
 
-1. Set up production Supabase project
+1. Set up production  project
 2. Configure environment variables
 3. Set up custom domain (optional)
 4. Configure CORS settings
@@ -407,7 +407,7 @@ Install these extensions for optimal development experience:
 
 ## Support & Documentation
 
-- **Supabase Docs**: [https://supabase.com/docs](https://supabase.com/docs)
+- ** Docs**: [https://.com/docs](https://.com/docs)
 - **Firebase Docs**: [https://firebase.google.com/docs](https://firebase.google.com/docs)
 - **React Docs**: [https://react.dev](https://react.dev)
 - **Tailwind CSS**: [https://tailwindcss.com](https://tailwindcss.com)
